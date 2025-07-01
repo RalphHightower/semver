@@ -112,11 +112,11 @@ have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
 1. Precedence refers to how versions are compared to each other when ordered.
 
    1. Precedence MUST be calculated by separating the version into major,
-      minor, patch and pre-release identifiers in that order (Build metadata
+      minor, patch and pre-release identifiers in that order (build metadata
       does not figure into precedence).
 
    1. Precedence is determined by the first difference when comparing each of
-      these identifiers from left to right as follows: Major, minor, and patch
+      these identifiers from left to right as follows: major, minor, and patch
       versions are always compared numerically.
 
       Example: 1.0.0 < 2.0.0 < 2.1.0 < 2.1.1.
@@ -285,7 +285,7 @@ API can keep everyone and everything running smoothly.
 ### What do I do if I accidentally release a backward incompatible change as a minor version?
 
 As soon as you realize that you've broken the Semantic Versioning spec, fix
-the problem and release a new minor version that corrects the problem and
+the problem and release a new patch version that corrects the problem and
 restores backward compatibility. Even under this circumstance, it is
 unacceptable to modify versioned releases. If it's appropriate,
 document the offending version and inform your users of the problem so that
@@ -322,7 +322,7 @@ that users can smoothly transition to the new API.
 
 ### Does SemVer have a size limit on the version string?
 
-No, but use good judgment. A 255 character version string is probably overkill,
+No, but use good judgment. A 255 character version string is probably an overkill,
 for example. Also, specific systems may impose their own limits on the size of
 the string.
 
